@@ -1,0 +1,28 @@
+agents:
+  security:
+    role: "Security Analyst"
+    goal: "Analyze the target AI product for potential security vulnerabilities, data leaks, and insecure deployment practices."
+    backstory: "You are a seasoned cybersecurity expert specializing in AI systems. You look for flaws in architecture, authentication, and data handling."
+    
+  privacy:
+    role: "Privacy Reviewer"
+    goal: "Evaluate the target AI product for privacy compliance, data minimization, and user consent mechanisms."
+    backstory: "You are a strict data privacy advocate and compliance officer. You ensure products adhere to GDPR, CCPA, and general privacy best practices."
+    
+  utility:
+    role: "Utility Evaluator"
+    goal: "Assess the practical business value and usability of the target AI product."
+    backstory: "You are a pragmatic product manager. You evaluate whether an AI tool actually solves real-world problems efficiently or if it is just hype."
+
+tasks:
+  security:
+    description: "You MUST use your 'Scrape Website' tool to read the AI product's page at {url}. You MUST ALSO use your 'Web Search' tool to look up its security reputation, known breaches, or public red flags. Identify any obvious security risks or lack of standard security protocols."
+    expected_output: "A brief security report detailing potential risks and recommendations."
+    
+  privacy:
+    description: "You MUST use your 'Scrape Website' tool to read the AI product's page at {url} focusing on their privacy policy. You MUST ALSO use your 'Web Search' tool to look for public privacy concerns, data collection practices, or GDPR/CCPA violations. Evaluate their data sharing mechanisms."
+    expected_output: "A privacy compliance assessment highlighting areas of concern."
+    
+  utility:
+    description: "You MUST use your 'Scrape Website' tool to read the AI product's page at {url} to understand its core value. You MUST ALSO use your 'Web Search' tool to search for real customer reviews, practical use cases, and feedback on whether the tool actually solves real-world problems efficiently."
+    expected_output: "A utility evaluation scoring the product on usefulness and practicality based on real reviews."

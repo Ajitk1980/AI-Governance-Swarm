@@ -1,0 +1,153 @@
+{
+    "name": "Phase 4 - Traffic Cop (V3 - Decoupled Save)",
+    "nodes": [
+        {
+            "parameters": {
+                "httpMethod": "POST",
+                "path": "ai-risk-assessment",
+                "responseMode": "responseNode",
+                "options": {}
+            },
+            "id": "1",
+            "name": "Analyze Webhook",
+            "type": "n8n-nodes-base.webhook",
+            "typeVersion": 1,
+            "position": [
+                200,
+                200
+            ]
+        },
+        {
+            "parameters": {
+                "method": "POST",
+                "url": "http://localhost:5000/run",
+                "sendBody": true,
+                "specifyBody": "json",
+                "jsonBody": "={\n  \"url\": \"{{ $('Analyze Webhook').item.json.body.url }}\",\n  \"optimize\": \"{{ $('Analyze Webhook').item.json.body.optimize }}\",\n  \"assessments\": {{ JSON.stringify($('Analyze Webhook').item.json.body.assessments) }}\n}",
+                "options": {
+                    "timeout": 1200000
+                }
+            },
+            "id": "2",
+            "name": "HTTP Request (Swarm API)",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.1,
+            "position": [
+                420,
+                200
+            ]
+        },
+        {
+            "parameters": {
+                "options": {},
+                "respondWith": "text",
+                "responseBody": "={{ $json.report }}"
+            },
+            "id": "3",
+            "name": "Respond to Dashboard",
+            "type": "n8n-nodes-base.respondToWebhook",
+            "typeVersion": 1,
+            "position": [
+                640,
+                200
+            ]
+        },
+        {
+            "parameters": {
+                "httpMethod": "POST",
+                "path": "save-risk-assessment",
+                "responseMode": "onReceived",
+                "options": {}
+            },
+            "id": "4",
+            "name": "Save Webhook",
+            "type": "n8n-nodes-base.webhook",
+            "typeVersion": 1,
+            "position": [
+                200,
+                450
+            ]
+        },
+        {
+            "parameters": {
+                "operation": "append",
+                "documentId": {
+                    "__rl": true,
+                    "value": "",
+                    "mode": "id"
+                },
+                "sheetName": {
+                    "__rl": true,
+                    "value": "",
+                    "mode": "name"
+                },
+                "fieldsUi": {
+                    "fieldValues": [
+                        {
+                            "fieldId": "URL",
+                            "fieldValue": "={{ $json.body.url }}"
+                        },
+                        {
+                            "fieldId": "Status",
+                            "fieldValue": "Completed"
+                        },
+                        {
+                            "fieldId": "Report",
+                            "fieldValue": "={{ $json.body.report }}"
+                        },
+                        {
+                            "fieldId": "Timestamp",
+                            "fieldValue": "={{ $now }}"
+                        }
+                    ]
+                }
+            },
+            "id": "5",
+            "name": "Append to Google Sheets",
+            "type": "n8n-nodes-base.googleSheets",
+            "typeVersion": 4,
+            "position": [
+                420,
+                450
+            ]
+        }
+    ],
+    "pinData": {},
+    "connections": {
+        "Analyze Webhook": {
+            "main": [
+                [
+                    {
+                        "node": "HTTP Request (Swarm API)",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "HTTP Request (Swarm API)": {
+            "main": [
+                [
+                    {
+                        "node": "Respond to Dashboard",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Save Webhook": {
+            "main": [
+                [
+                    {
+                        "node": "Append to Google Sheets",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    },
+    "active": false,
+    "settings": {}
+}

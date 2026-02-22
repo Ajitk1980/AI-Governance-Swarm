@@ -1,0 +1,147 @@
+{
+    "name": "Phase 4 - AI Governance Traffic Cop",
+    "nodes": [
+        {
+            "parameters": {
+                "httpMethod": "POST",
+                "path": "ai-risk-assessment",
+                "responseMode": "lastNode",
+                "options": {}
+            },
+            "id": "1",
+            "name": "Webhook",
+            "type": "n8n-nodes-base.webhook",
+            "typeVersion": 1,
+            "position": [
+                250,
+                300
+            ],
+            "webhookId": "placeholder-webhook-uuid"
+        },
+        {
+            "parameters": {
+                "operation": "append",
+                "documentId": {
+                    "__rl": true,
+                    "value": "",
+                    "mode": "id"
+                },
+                "sheetName": {
+                    "__rl": true,
+                    "value": "",
+                    "mode": "name"
+                },
+                "fieldsUi": {
+                    "fieldValues": [
+                        {
+                            "fieldId": "URL",
+                            "fieldValue": "={{ $json.body.url }}"
+                        },
+                        {
+                            "fieldId": "Status",
+                            "fieldValue": "Pending Analysis"
+                        },
+                        {
+                            "fieldId": "Timestamp",
+                            "fieldValue": "={{ $now }}"
+                        }
+                    ]
+                }
+            },
+            "id": "2",
+            "name": "Log to Google Sheets",
+            "type": "n8n-nodes-base.googleSheets",
+            "typeVersion": 4,
+            "position": [
+                470,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "command": "=python3 /home/kajit/ai-governance-swarm/swarm/main.py \"{{ $json.body.url }}\""
+            },
+            "id": "3",
+            "name": "Run CrewAI Swarm",
+            "type": "n8n-nodes-base.executeCommand",
+            "typeVersion": 1,
+            "position": [
+                690,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "operation": "update",
+                "documentId": {
+                    "__rl": true,
+                    "value": "",
+                    "mode": "id"
+                },
+                "sheetName": {
+                    "__rl": true,
+                    "value": "",
+                    "mode": "name"
+                },
+                "fieldsUi": {
+                    "fieldValues": [
+                        {
+                            "fieldId": "Status",
+                            "fieldValue": "Completed"
+                        },
+                        {
+                            "fieldId": "Report",
+                            "fieldValue": "={{ $json.stdout }}"
+                        }
+                    ]
+                }
+            },
+            "id": "4",
+            "name": "Update Sheets with Result",
+            "type": "n8n-nodes-base.googleSheets",
+            "typeVersion": 4,
+            "position": [
+                910,
+                300
+            ]
+        }
+    ],
+    "pinData": {},
+    "connections": {
+        "Webhook": {
+            "main": [
+                [
+                    {
+                        "node": "Log to Google Sheets",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Log to Google Sheets": {
+            "main": [
+                [
+                    {
+                        "node": "Run CrewAI Swarm",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Run CrewAI Swarm": {
+            "main": [
+                [
+                    {
+                        "node": "Update Sheets with Result",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    },
+    "active": false,
+    "settings": {}
+}

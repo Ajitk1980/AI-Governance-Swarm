@@ -1,0 +1,181 @@
+{
+    "name": "Phase 4 - AI Governance Traffic Cop (V2 + Returning Report)",
+    "nodes": [
+        {
+            "parameters": {
+                "httpMethod": "POST",
+                "path": "ai-risk-assessment",
+                "responseMode": "responseNode",
+                "options": {}
+            },
+            "id": "1",
+            "name": "Webhook",
+            "type": "n8n-nodes-base.webhook",
+            "typeVersion": 1,
+            "position": [
+                250,
+                300
+            ],
+            "webhookId": "placeholder-webhook-uuid"
+        },
+        {
+            "parameters": {
+                "operation": "append",
+                "documentId": {
+                    "__rl": true,
+                    "value": "",
+                    "mode": "id"
+                },
+                "sheetName": {
+                    "__rl": true,
+                    "value": "",
+                    "mode": "name"
+                },
+                "fieldsUi": {
+                    "fieldValues": [
+                        {
+                            "fieldId": "URL",
+                            "fieldValue": "={{ $json.body.url }}"
+                        },
+                        {
+                            "fieldId": "Status",
+                            "fieldValue": "Pending Analysis"
+                        },
+                        {
+                            "fieldId": "Timestamp",
+                            "fieldValue": "={{ $now }}"
+                        }
+                    ]
+                }
+            },
+            "id": "2",
+            "name": "Log to Google Sheets",
+            "type": "n8n-nodes-base.googleSheets",
+            "typeVersion": 4,
+            "position": [
+                470,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "method": "POST",
+                "url": "http://localhost:5000/run",
+                "sendBody": true,
+                "specifyBody": "json",
+                "jsonBody": "={\n  \"url\": \"{{ $('Webhook').item.json.body.url }}\"\n}",
+                "options": {}
+            },
+            "id": "3",
+            "name": "HTTP Request",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 4.1,
+            "position": [
+                690,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "operation": "update",
+                "documentId": {
+                    "__rl": true,
+                    "value": "",
+                    "mode": "id"
+                },
+                "sheetName": {
+                    "__rl": true,
+                    "value": "",
+                    "mode": "name"
+                },
+                "mappingColumnMode": "mapManually",
+                "columnToMatchOn": "URL",
+                "valueToMatchOn": "={{ $('Webhook').item.json.body.url }}",
+                "fieldsUi": {
+                    "fieldValues": [
+                        {
+                            "fieldId": "Status",
+                            "fieldValue": "Completed"
+                        },
+                        {
+                            "fieldId": "Report",
+                            "fieldValue": "={{ $json.report }}"
+                        }
+                    ]
+                }
+            },
+            "id": "4",
+            "name": "Update Sheets with Result",
+            "type": "n8n-nodes-base.googleSheets",
+            "typeVersion": 4,
+            "position": [
+                910,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "options": {},
+                "respondWith": "json",
+                "responseBody": "={\n  \"report\": \"{{ $('HTTP Request').item.json.report }}\"\n}"
+            },
+            "id": "5",
+            "name": "Respond to Webhook",
+            "type": "n8n-nodes-base.respondToWebhook",
+            "typeVersion": 1,
+            "position": [
+                1130,
+                300
+            ]
+        }
+    ],
+    "pinData": {},
+    "connections": {
+        "Webhook": {
+            "main": [
+                [
+                    {
+                        "node": "Log to Google Sheets",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Log to Google Sheets": {
+            "main": [
+                [
+                    {
+                        "node": "HTTP Request",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "HTTP Request": {
+            "main": [
+                [
+                    {
+                        "node": "Update Sheets with Result",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Update Sheets with Result": {
+            "main": [
+                [
+                    {
+                        "node": "Respond to Webhook",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    },
+    "active": false,
+    "settings": {}
+}

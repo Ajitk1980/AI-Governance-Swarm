@@ -22,9 +22,14 @@ def get_wsl_host_ip():
 
 def get_ollama_llm():
     host_ip = get_wsl_host_ip()
+    import os
+    os.environ["LITELLM_REQUEST_TIMEOUT"] = "3600" # 1 hour
+    os.environ["OLLAMA_TIMEOUT"] = "3600"
+    
     return LLM(
-        model="ollama/hermes3:latest",
-        base_url=f"http://{host_ip}:11434"
+        model="ollama/gemma2:27b",
+        base_url=f"http://{host_ip}:11434",
+        timeout=1800
     )
 
 def get_gemini_llm():

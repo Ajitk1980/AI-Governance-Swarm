@@ -1,0 +1,10 @@
+data: [07:27:18] [Agent] 👋 Hello! I am the Agent. I am now starting my analysis...
+
+data: [07:27:30] [Agent] ToolResult(result='Saptharushi – Cutting-edge platform built for a privacy-first world\nSkip to main content\nSkip to footer\nModern Audience Platf...
+
+data: [07:28:02] [Agent] ToolResult(result='No results found for query: https://example.com security risks', result_as_answer=False)
+
+data: [07:29:21] [Agent] ToolResult(result='No results found for query: saptharushi security breach', result_as_answer=False)
+
+data: [07:31:13] [Agent] 👋 Hello! I am the Agent. I am now starting my analysis...
+

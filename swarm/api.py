@@ -4,8 +4,8 @@ from main import run_swarm
 import logger
 
 app = Flask(__name__)
-# Enable CORS for the React app port so EventSource connects directly
-CORS(app, resources={r"/stream": {"origins": "http://localhost:5174"}})
+# Enable CORS for the React app port
+CORS(app, resources={r"/*": {"origins": ["http://localhost:5174", "http://localhost:5173"]}})
 
 @app.route('/stream', methods=['GET'])
 def stream_logs():
@@ -43,6 +43,7 @@ def run_agent():
         return jsonify({"success": True, "report": str(result.raw if hasattr(result, 'raw') else result)})
     except Exception as e:
         logger.log_queue.put("DONE_SIGNAL")
+        logger.log_error(e, context="/run endpoint")
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':

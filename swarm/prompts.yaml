@@ -16,13 +16,13 @@ agents:
 
 tasks:
   security:
-    description: "You MUST use your 'Scrape Website' tool to read the AI product's page at {url}. You MUST ALSO use your 'Web Search' tool to look up its security reputation, known breaches, or public red flags. Identify any obvious security risks or lack of standard security protocols."
+    description: "You MUST use your 'Scrape Website' tool to read the AI product's page at exactly this URL: {url}. You MUST NOT scrape example.com. You MUST ALSO use your 'Web Search' tool to look up its security reputation, known breaches, or public red flags. Identify any obvious security risks or lack of standard security protocols."
     expected_output: "A brief security report detailing potential risks and recommendations."
     
   privacy:
-    description: "You MUST use your 'Scrape Website' tool to read the AI product's page at {url} focusing on their privacy policy. You MUST ALSO use your 'Web Search' tool to look for public privacy concerns, data collection practices, or GDPR/CCPA violations. Evaluate their data sharing mechanisms."
+    description: "You MUST use your 'Scrape Website' tool to read the AI product's page at exactly this URL: {url} focusing on their privacy policy. You MUST NOT scrape example.com. You MUST ALSO use your 'Web Search' tool to look for public privacy concerns, data collection practices, or GDPR/CCPA violations. Evaluate their data sharing mechanisms."
     expected_output: "A privacy compliance assessment highlighting areas of concern."
     
   utility:
-    description: "You MUST use your 'Scrape Website' tool to read the AI product's page at {url} to understand its core value. You MUST ALSO use your 'Web Search' tool to search for real customer reviews, practical use cases, and feedback on whether the tool actually solves real-world problems efficiently."
+    description: "You MUST use your 'Scrape Website' tool to read the AI product's page at exactly this URL: {url} to understand its core value. You MUST NOT scrape example.com. You MUST ALSO use your 'Web Search' tool to search for real customer reviews, practical use cases, and feedback on whether the tool actually solves real-world problems efficiently."
     expected_output: "A utility evaluation scoring the product on usefulness and practicality based on real reviews."

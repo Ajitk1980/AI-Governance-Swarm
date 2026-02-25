@@ -1,0 +1,194 @@
+2026-02-23 17:51:18,778 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-23 17:51:18,779 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-02-23 17:51:46,816 - SwarmBackend - INFO - --- New Swarm Run Started ---
+2026-02-23 17:51:46,864 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-23 17:51:50,766 - werkzeug - INFO - 127.0.0.1 - - [23/Feb/2026 17:51:50] "[33mGET / HTTP/1.1[0m" 404 -
+2026-02-23 17:55:13,339 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2026-02-23 17:55:14,094 - SwarmBackend - INFO - [17:55:14] [Agent] ToolResult(result='Saptharushi – Cutting-edge platform built for a privacy-first world\nSkip to main content\nSkip to footer\nModern Audience Platf...
+2026-02-23 17:55:14,101 - SwarmBackend - INFO - [17:55:14] [Agent] Thought: I need to gather information about the AI product from the given URL and check its online reputation for security concerns. Using tool: sc...
+2026-02-23 17:55:14,102 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-23 18:02:52,830 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2026-02-23 18:02:53,185 - primp - INFO - response: https://www.bing.com/search?q=Saptharushi+security 200
+2026-02-23 18:02:53,242 - SwarmBackend - INFO - [18:02:53] [Agent] ToolResult(result='No results found for query: Saptharushi security', result_as_answer=False)
+2026-02-23 18:02:53,244 - SwarmBackend - INFO - [18:02:53] [Agent] Thought: I need to gather information about the AI product from the given URL and check its online reputation for security concerns. Using tool: we...
+2026-02-23 18:02:53,249 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-23 18:08:07,640 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2026-02-23 18:08:07,651 - SwarmBackend - INFO - [18:08:07] [Agent] Thought: I now know the final answer
+2026-02-23 18:08:07,709 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-23 18:13:26,793 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2026-02-23 18:13:26,808 - SwarmBackend - INFO - [18:13:26] [Agent] ToolResult(result='Saptharushi – Cutting-edge platform built for a privacy-first world\nSkip to main content\nSkip to footer\nModern Audience Platf...
+2026-02-23 18:13:26,810 - SwarmBackend - INFO - [18:13:26] [Agent] Thought: I need to find out what Saptharushi's privacy policy says Using tool: scrape_website
+2026-02-23 18:13:26,812 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-23 18:17:17,291 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2026-02-23 18:17:17,303 - SwarmBackend - INFO - [18:17:17] [Agent] ToolResult(result='Saptharushi – Cutting-edge platform built for a privacy-first world\nSkip to main content\nSkip to footer\nModern Audience Platf...
+2026-02-23 18:17:17,306 - SwarmBackend - INFO - [18:17:17] [Agent] Thought: I need to see if Saptharushi has a specific privacy policy link on their website. Using tool: scrape_website
+2026-02-23 18:17:17,308 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-23 18:19:10,341 - werkzeug - INFO - 127.0.0.1 - - [23/Feb/2026 18:19:10] "OPTIONS /run HTTP/1.1" 200 -
+2026-02-23 18:19:10,343 - werkzeug - INFO - 127.0.0.1 - - [23/Feb/2026 18:19:10] "GET /stream HTTP/1.1" 200 -
+2026-02-23 18:19:10,431 - SwarmBackend - INFO - --- New Swarm Run Started ---
+2026-02-23 18:19:10,576 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-23 18:21:57,445 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2026-02-23 18:21:57,463 - SwarmBackend - INFO - [18:21:57] [Agent] ToolResult(result='Saptharushi – Cutting-edge platform built for a privacy-first world\nSkip to main content\nSkip to footer\nModern Audience Platf...
+2026-02-23 18:21:57,467 - SwarmBackend - INFO - [18:21:57] [Agent] Thought: I need to see if there's any mention of a specific privacy policy or terms of service. Using tool: scrape_website
+2026-02-23 18:21:57,470 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-23 18:25:23,240 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2026-02-23 18:25:24,041 - SwarmBackend - INFO - [18:25:24] [Agent] ToolResult(result='Saptharushi – Cutting-edge platform built for a privacy-first world\nSkip to main content\nSkip to footer\nModern Audience Platf...
+2026-02-23 18:25:24,046 - SwarmBackend - INFO - [18:25:24] [Agent] Thought: I need to gather information about the AI product from its website and search for any public reputation or security concerns. Using tool: ...
+2026-02-23 18:25:24,048 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-23 18:32:16,817 - werkzeug - INFO - 127.0.0.1 - - [23/Feb/2026 18:32:16] "POST /run HTTP/1.1" 200 -
+2026-02-23 18:35:44,577 - werkzeug - INFO - 127.0.0.1 - - [23/Feb/2026 18:35:44] "POST /run HTTP/1.1" 200 -
+2026-02-23 18:35:44,578 - werkzeug - INFO - 127.0.0.1 - - [23/Feb/2026 18:35:44] "GET /stream HTTP/1.1" 200 -
+2026-02-23 19:40:00,867 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-23 19:40:00,867 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-02-23 19:57:03,251 - werkzeug - INFO - 127.0.0.1 - - [23/Feb/2026 19:57:03] "OPTIONS /run HTTP/1.1" 200 -
+2026-02-23 19:57:03,498 - SwarmBackend - INFO - --- New Swarm Run Started ---
+2026-02-23 19:57:03,541 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-23 20:00:13,602 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2026-02-23 20:00:14,318 - SwarmBackend - INFO - [20:00:14] [Agent] ToolResult(result='Saptharushi – Cutting-edge platform built for a privacy-first world\nSkip to main content\nSkip to footer\nModern Audience Platf...
+2026-02-23 20:00:14,324 - werkzeug - INFO - 127.0.0.1 - - [23/Feb/2026 20:00:14] "GET /stream HTTP/1.1" 200 -
+2026-02-23 20:00:14,324 - SwarmBackend - INFO - [20:00:14] [Agent] Thought: I need to gather information about the AI product from the provided URL and search for its security reputation online. Using tool: scrape_...
+2026-02-23 20:00:14,330 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-23 20:03:20,918 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2026-02-23 20:03:21,144 - primp - INFO - response: https://www.bing.com/search?q=Saptharushi+security+review 200
+2026-02-23 20:03:21,211 - SwarmBackend - INFO - [20:03:21] [Agent] ToolResult(result='Title: オンラインでPDFの結合や圧縮・編集ができる「iLovePDF」\nSnippet: May 22, 2022 · ビジネスシーンでは公式文書として「PDF」がよく使われますが、加工するのは手間がかかります。そこで今回はPDFが簡単に加工でき...
+2026-02-23 20:03:21,216 - SwarmBackend - INFO - [20:03:21] [Agent] Thought: I need to search for information about Saptharushi's security reputation online. Using tool: web_search
+2026-02-23 20:03:21,217 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-24 07:08:25,856 - werkzeug - INFO - 127.0.0.1 - - [24/Feb/2026 07:08:25] "OPTIONS /run HTTP/1.1" 200 -
+2026-02-24 07:08:25,946 - SwarmBackend - INFO - --- New Swarm Run Started ---
+2026-02-24 07:08:26,248 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-24 07:14:14,963 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2026-02-24 07:14:18,998 - SwarmBackend - INFO - [07:14:18] [Agent] ToolResult(result='Saptharushi – Cutting-edge platform built for a privacy-first world\nSkip to main content\nSkip to footer\nModern Audience Platf...
+2026-02-24 07:14:19,037 - werkzeug - INFO - 127.0.0.1 - - [24/Feb/2026 07:14:19] "GET /stream HTTP/1.1" 200 -
+2026-02-24 07:14:19,076 - SwarmBackend - INFO - [07:14:19] [Agent] Thought: I need to gather information about the AI product from the provided website and search for any security-related news or concerns online. U...
+2026-02-24 07:14:19,313 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-24 07:42:06,632 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-24 07:42:06,632 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-02-24 07:45:49,906 - werkzeug - INFO - 127.0.0.1 - - [24/Feb/2026 07:45:49] "HEAD /stream HTTP/1.1" 200 -
+2026-02-24 07:47:28,438 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-24 07:47:28,438 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-02-24 07:48:22,299 - werkzeug - INFO - 127.0.0.1 - - [24/Feb/2026 07:48:22] "HEAD /stream HTTP/1.1" 200 -
+2026-02-24 07:49:51,495 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-02-24 07:49:51,495 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-02-24 07:51:07,371 - werkzeug - INFO - 127.0.0.1 - - [24/Feb/2026 07:51:07] "OPTIONS /run HTTP/1.1" 200 -
+2026-02-24 07:51:07,623 - SwarmBackend - INFO - --- New Swarm Run Started ---
+2026-02-24 07:51:07,912 - root - INFO - Gemini: Successfully validated tool 'scrape_website'
+2026-02-24 07:51:07,912 - root - INFO - Gemini: Successfully validated tool 'web_search'
+2026-02-24 07:51:09,998 - root - INFO - Gemini: Successfully validated tool 'scrape_website'
+2026-02-24 07:51:09,998 - root - INFO - Gemini: Successfully validated tool 'web_search'
+2026-02-24 07:51:11,454 - primp - INFO - response: https://www.bing.com/search?q=Saptharushi+security+reputation%2C+known+breaches%2C+public+red+flags 200
+2026-02-24 07:51:11,501 - root - INFO - Gemini: Successfully validated tool 'scrape_website'
+2026-02-24 07:51:11,501 - root - INFO - Gemini: Successfully validated tool 'web_search'
+2026-02-24 07:51:21,509 - SwarmBackend - INFO - [07:51:21] [Agent] Security Report: Saptharushi  **Overview:** Saptharushi presents itself as a "cutting-edge platform built for a privacy-first world," emphasizing "...
+2026-02-24 07:51:21,512 - werkzeug - INFO - 127.0.0.1 - - [24/Feb/2026 07:51:21] "GET /stream HTTP/1.1" 200 -
+2026-02-24 07:51:21,525 - root - INFO - Gemini: Successfully validated tool 'scrape_website'
+2026-02-24 07:51:21,525 - root - INFO - Gemini: Successfully validated tool 'web_search'
+2026-02-24 07:51:23,241 - root - INFO - Gemini: Successfully validated tool 'scrape_website'
+2026-02-24 07:51:23,242 - root - INFO - Gemini: Successfully validated tool 'web_search'
+2026-02-24 07:51:24,958 - primp - INFO - response: https://www.bing.com/search?q=Saptharushi+privacy+concerns+data+collection+GDPR+CCPA+violations 200
+2026-02-24 07:51:24,979 - root - INFO - Gemini: Successfully validated tool 'scrape_website'
+2026-02-24 07:51:24,980 - root - INFO - Gemini: Successfully validated tool 'web_search'
+2026-02-24 07:51:32,303 - SwarmBackend - INFO - [07:51:32] [Agent] **Privacy Compliance Assessment: Saptharushi**  **1. Data Minimization and Collection Practices:**  Saptharushi's website heavily emphasizes a "pri...
+2026-02-24 07:51:32,314 - root - INFO - Gemini: Successfully validated tool 'scrape_website'
+2026-02-24 07:51:32,315 - root - INFO - Gemini: Successfully validated tool 'web_search'
+2026-02-24 07:51:35,065 - root - INFO - Gemini: Successfully validated tool 'scrape_website'
+2026-02-24 07:51:35,066 - root - INFO - Gemini: Successfully validated tool 'web_search'
+2026-02-24 07:51:35,410 - root - ERROR - Google Gemini API error: 429 - You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-2.5-flash
+Please retry in 23.904269784s.
+2026-02-24 07:51:35,413 - root - INFO - Gemini: Successfully validated tool 'scrape_website'
+2026-02-24 07:51:35,413 - root - INFO - Gemini: Successfully validated tool 'web_search'
+2026-02-24 07:51:39,666 - primp - INFO - response: https://www.bing.com/search?q=Saptharushi+customer+reviews+practical+use+cases+feedback+real-world+problems 200
+2026-02-24 07:51:39,722 - root - INFO - Gemini: Successfully validated tool 'scrape_website'
+2026-02-24 07:51:39,724 - root - INFO - Gemini: Successfully validated tool 'web_search'
+2026-02-24 07:51:39,988 - root - ERROR - Google Gemini API error: 429 - You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-2.5-flash
+Please retry in 20.204919587s.
+2026-02-24 07:51:39,992 - root - INFO - Gemini: Successfully validated tool 'scrape_website'
+2026-02-24 07:51:39,993 - root - INFO - Gemini: Successfully validated tool 'web_search'
+2026-02-24 07:51:40,275 - root - ERROR - Google Gemini API error: 429 - You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 5, model: gemini-2.5-flash
+Please retry in 19.925593088s.
+2026-02-24 07:51:40,284 - werkzeug - INFO - 127.0.0.1 - - [24/Feb/2026 07:51:40] "POST /run HTTP/1.1" 200 -
+2026-02-24 07:51:48,417 - werkzeug - INFO - 127.0.0.1 - - [24/Feb/2026 07:51:48] "OPTIONS /run HTTP/1.1" 200 -
+2026-02-24 07:51:48,720 - SwarmBackend - INFO - --- New Swarm Run Started ---
+2026-02-24 07:51:48,756 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-24 07:55:20,991 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2026-02-24 07:55:21,562 - SwarmBackend - INFO - [07:55:21] [Agent] ToolResult(result='Saptharushi – Cutting-edge platform built for a privacy-first world\nSkip to main content\nSkip to footer\nModern Audience Platf...
+2026-02-24 07:55:21,563 - werkzeug - INFO - 127.0.0.1 - - [24/Feb/2026 07:55:21] "GET /stream HTTP/1.1" 200 -
+2026-02-24 07:55:21,568 - SwarmBackend - INFO - [07:55:21] [Agent] Thought: I need to gather information about the AI product from the given URL and research its security reputation online. Using tool: scrape_website
+2026-02-24 07:55:21,570 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-24 07:59:06,503 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2026-02-24 07:59:06,676 - primp - INFO - response: https://www.bing.com/search?q=Saptharushi+security+vulnerabilities 200
+2026-02-24 07:59:06,723 - SwarmBackend - INFO - [07:59:06] [Agent] ToolResult(result='No results found for query: Saptharushi security vulnerabilities', result_as_answer=False)
+2026-02-24 07:59:06,725 - SwarmBackend - INFO - [07:59:06] [Agent] Thought: The website provides general information about Saptharushi's functionalities and features, highlighting its focus on privacy and security....
+2026-02-24 07:59:06,725 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-24 08:00:10,206 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2026-02-24 08:00:10,211 - SwarmBackend - INFO - [08:00:10] [Agent] ToolResult(result='Saptharushi – Cutting-edge platform built for a privacy-first world\nSkip to main content\nSkip to footer\nModern Audience Platf...
+2026-02-24 08:00:10,222 - SwarmBackend - INFO - [08:00:10] [Agent] Thought: The website mentions several security-focused features, but I couldn't find any public information about known vulnerabilities. It's cruci...
+2026-02-24 08:00:10,223 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-24 08:11:28,123 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2026-02-24 08:11:28,190 - SwarmBackend - INFO - [08:11:28] [Agent] ToolResult(result='Saptharushi – Cutting-edge platform built for a privacy-first world\nSkip to main content\nSkip to footer\nModern Audience Platf...
+2026-02-24 08:11:28,222 - SwarmBackend - INFO - [08:11:28] [Agent] Thought:  The website mentions using differential privacy and federated learning, but it lacks details about their implementation. I need more info...
+2026-02-24 08:11:28,223 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-24 08:16:48,877 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2026-02-24 08:16:49,105 - primp - INFO - response: https://www.bing.com/search?q=Saptharushi+Differential+Privacy+implementation 200
+2026-02-24 08:16:49,229 - SwarmBackend - INFO - [08:16:49] [Agent] ToolResult(result='No results found for query: Saptharushi Differential Privacy implementation', result_as_answer=False)
+2026-02-24 08:16:49,234 - SwarmBackend - INFO - [08:16:49] [Agent] Thought: I need to dig deeper into Saptharushi's specific claims about differential privacy and federated learning. Using tool: web_search
+2026-02-24 08:16:49,235 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-24 08:17:58,855 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2026-02-24 08:17:59,051 - primp - INFO - response: https://www.bing.com/search?q=Saptharushi+whitepaper 200
+2026-02-24 08:17:59,064 - SwarmBackend - INFO - [08:17:59] [Agent] ToolResult(result='No results found for query: Saptharushi whitepaper\n\n\nYou ONLY have access to the following tools, and should NEVER make up to...
+2026-02-24 08:17:59,074 - SwarmBackend - INFO - [08:17:59] [Agent] Thought: The website mentions using differential privacy and federated learning, but lacks details about their specific implementation. I need to f...
+2026-02-24 08:17:59,075 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-24 08:24:56,329 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2026-02-24 08:24:56,341 - SwarmBackend - INFO - [08:24:56] [Agent] Thought:  I need to analyze the potential risks based on the limited information available.  Thought: I now know the final answer
+2026-02-24 08:24:56,452 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-24 08:29:16,453 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2026-02-24 08:29:16,466 - SwarmBackend - INFO - [08:29:16] [Agent] ToolResult(result='Saptharushi – Cutting-edge platform built for a privacy-first world\nSkip to main content\nSkip to footer\nModern Audience Platf...
+2026-02-24 08:29:16,478 - SwarmBackend - INFO - [08:29:16] [Agent] Thought: I need to review Saptharushi's privacy policy for compliance details. Then I should search for any public concerns regarding their data pr...
+2026-02-24 08:29:16,479 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-24 08:33:17,177 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2026-02-24 08:33:17,520 - primp - INFO - response: https://www.bing.com/search?q=Saptharushi+privacy+concerns 200
+2026-02-24 08:33:17,602 - SwarmBackend - INFO - [08:33:17] [Agent] ToolResult(result='No results found for query: Saptharushi privacy concerns', result_as_answer=False)
+2026-02-24 08:33:17,609 - SwarmBackend - INFO - [08:33:17] [Agent] Thought: I need to review Saptharushi's privacy policy for compliance details. Then I should search for any public concerns regarding their data pr...
+2026-02-24 08:33:17,610 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-24 08:34:20,546 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2026-02-24 08:34:20,556 - SwarmBackend - INFO - [08:34:20] [Agent] ToolResult(result='Saptharushi – Cutting-edge platform built for a privacy-first world\nSkip to main content\nSkip to footer\nModern Audience Platf...
+2026-02-24 08:34:20,574 - SwarmBackend - INFO - [08:34:20] [Agent] Thought: I need to analyze the scraped website content for privacy-related information and then use my web search tool to find any external concern...
+2026-02-24 08:34:20,576 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-24 08:41:35,613 - LiteLLM - INFO - Wrapper: Completed Call, calling success_handler
+2026-02-24 08:41:35,645 - SwarmBackend - INFO - [08:41:35] [Agent] ToolResult(result='Saptharushi – Cutting-edge platform built for a privacy-first world\nSkip to main content\nSkip to footer\nModern Audience Platf...
+2026-02-24 08:41:35,677 - SwarmBackend - INFO - [08:41:35] [Agent] Thought: I need to analyze the scraped website content for privacy-related information and then use my web search tool to find any external concern...
+2026-02-24 08:41:35,683 - LiteLLM - INFO - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+2026-02-24 09:32:31,560 - werkzeug - INFO - 127.0.0.1 - - [24/Feb/2026 09:32:31] "POST /run HTTP/1.1" 200 -

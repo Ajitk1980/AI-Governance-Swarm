@@ -1,0 +1,65 @@
+/home/kajit/ai-governance-swarm/swarm/custom_tools.py:44: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+/home/kajit/ai-governance-swarm/swarm/venv/lib/python3.12/site-packages/crewai/crew.py:1292: DeprecationWarning: deprecated
+  and hasattr(agent, "multimodal")
+/home/kajit/ai-governance-swarm/swarm/venv/lib/python3.12/site-packages/crewai/crew.py:1293: DeprecationWarning: deprecated
+  and getattr(agent, "multimodal", False)
+/home/kajit/ai-governance-swarm/swarm/custom_tools.py:44: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+/home/kajit/ai-governance-swarm/swarm/venv/lib/python3.12/site-packages/crewai/crew.py:1292: DeprecationWarning: deprecated
+  and hasattr(agent, "multimodal")
+/home/kajit/ai-governance-swarm/swarm/venv/lib/python3.12/site-packages/crewai/crew.py:1293: DeprecationWarning: deprecated
+  and getattr(agent, "multimodal", False)
+/home/kajit/ai-governance-swarm/swarm/custom_tools.py:44: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+/home/kajit/ai-governance-swarm/swarm/venv/lib/python3.12/site-packages/crewai/crew.py:1292: DeprecationWarning: deprecated
+  and hasattr(agent, "multimodal")
+/home/kajit/ai-governance-swarm/swarm/venv/lib/python3.12/site-packages/crewai/crew.py:1293: DeprecationWarning: deprecated
+  and getattr(agent, "multimodal", False)
+[92m07:51:48 - LiteLLM:INFO[0m: utils.py:3895 - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+[92m07:55:20 - LiteLLM:INFO[0m: utils.py:1630 - Wrapper: Completed Call, calling success_handler
+[92m07:55:21 - LiteLLM:INFO[0m: utils.py:3895 - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+[92m07:59:06 - LiteLLM:INFO[0m: utils.py:1630 - Wrapper: Completed Call, calling success_handler
+/home/kajit/ai-governance-swarm/swarm/custom_tools.py:44: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[92m07:59:06 - LiteLLM:INFO[0m: utils.py:3895 - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+[92m08:00:10 - LiteLLM:INFO[0m: utils.py:1630 - Wrapper: Completed Call, calling success_handler
+[92m08:00:10 - LiteLLM:INFO[0m: utils.py:3895 - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+[92m08:11:28 - LiteLLM:INFO[0m: utils.py:1630 - Wrapper: Completed Call, calling success_handler
+[92m08:11:28 - LiteLLM:INFO[0m: utils.py:3895 - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+[92m08:16:48 - LiteLLM:INFO[0m: utils.py:1630 - Wrapper: Completed Call, calling success_handler
+/home/kajit/ai-governance-swarm/swarm/custom_tools.py:44: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[92m08:16:49 - LiteLLM:INFO[0m: utils.py:3895 - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+[92m08:17:58 - LiteLLM:INFO[0m: utils.py:1630 - Wrapper: Completed Call, calling success_handler
+/home/kajit/ai-governance-swarm/swarm/custom_tools.py:44: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[92m08:17:59 - LiteLLM:INFO[0m: utils.py:3895 - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+[92m08:24:56 - LiteLLM:INFO[0m: utils.py:1630 - Wrapper: Completed Call, calling success_handler
+/home/kajit/ai-governance-swarm/swarm/venv/lib/python3.12/site-packages/crewai/crew.py:1292: DeprecationWarning: deprecated
+  and hasattr(agent, "multimodal")
+/home/kajit/ai-governance-swarm/swarm/venv/lib/python3.12/site-packages/crewai/crew.py:1293: DeprecationWarning: deprecated
+  and getattr(agent, "multimodal", False)
+[92m08:24:56 - LiteLLM:INFO[0m: utils.py:3895 - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+[92m08:29:16 - LiteLLM:INFO[0m: utils.py:1630 - Wrapper: Completed Call, calling success_handler
+[92m08:29:16 - LiteLLM:INFO[0m: utils.py:3895 - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+[92m08:33:17 - LiteLLM:INFO[0m: utils.py:1630 - Wrapper: Completed Call, calling success_handler
+/home/kajit/ai-governance-swarm/swarm/custom_tools.py:44: RuntimeWarning: This package (`duckduckgo_search`) has been renamed to `ddgs`! Use `pip install ddgs` instead.
+  with DDGS() as ddgs:
+[92m08:33:17 - LiteLLM:INFO[0m: utils.py:3895 - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+[92m08:34:20 - LiteLLM:INFO[0m: utils.py:1630 - Wrapper: Completed Call, calling success_handler
+[92m08:34:20 - LiteLLM:INFO[0m: utils.py:3895 - 
+LiteLLM completion() model= gemma2:27b; provider = ollama
+[92m08:41:35 - LiteLLM:INFO[0m: utils.py:1630 - Wrapper: Completed Call, calling success_handler
+[92m08:41:35 - LiteLLM:INFO[0m: utils.py:3895 - 
+LiteLLM completion() model= gemma2:27b; provider = ollama

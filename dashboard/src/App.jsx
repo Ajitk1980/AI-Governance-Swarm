@@ -25,7 +25,7 @@ function App() {
     };
 
     try {
-      const response = await fetch('http://localhost:5678/webhook/ai-risk-assessment', {
+      const response = await fetch('http://localhost:5000/run', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -237,7 +237,7 @@ function App() {
                   <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                   <div className="w-3 h-3 rounded-full bg-green-500"></div>
                 </div>
-                <span className="text-xs font-mono text-slate-300 font-bold tracking-wider uppercase">SwarmAI Agent Activity Log</span>
+                <span className="text-xs font-mono text-slate-300 font-bold tracking-wider uppercase">Agent Activity Log</span>
               </div>
               {status === 'loading' && (
                 <div className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></div>

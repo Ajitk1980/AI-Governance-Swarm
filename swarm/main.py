@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from crewai import Crew, Process
 from agents.risk_agents import create_security_analyst, create_privacy_reviewer, create_utility_evaluator
 from tasks.risk_tasks import create_security_task, create_privacy_task, create_utility_task
+from logger import swarm_step_callback
 
 # Load environment variables
 load_dotenv()
@@ -48,7 +49,8 @@ def run_swarm(url: str, optimize: str = "cost", assessments: list = None):
         agents=agents,
         tasks=tasks,
         process=Process.sequential,
-        verbose=True
+        verbose=True,
+        step_callback=swarm_step_callback
     )
     
     print("\n[Swarm Execution Started]")
